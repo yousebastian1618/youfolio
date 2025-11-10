@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Youfolio",
   description: "Sebastian's Personal Website",
+  icons: {
+    icon: [
+      { url: "/youfolio-bright-icon.png", media: "(prefers-color-scheme: light)" },
+      { url: "/youfolio-dark-icon.png", media: "(prefers-color-scheme: dark)" },
+    ],
+  },
 };
 
 export default function RootLayout({
