@@ -1,0 +1,27 @@
+.container {
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  .title1 {
+  }
+  .title2Purple {
+    color: var(--main-purple);
+  }
+  .title2Yellow {
+    color: var(--main-yellow-dark);
+  }
+}
+.containerRight {
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  justify-content: right;
+  .title1 {
+  }
+  .title2Purple {
+    color: var(--main-purple);
+  }
+  .title2Yellow {
+    color: var(--main-yellow-dark);
+  }
+}

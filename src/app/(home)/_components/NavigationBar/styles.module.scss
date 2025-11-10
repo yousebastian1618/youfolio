@@ -1,0 +1,30 @@
+.navigationBarContainer {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0;
+  .imageContainer {
+    position: relative;
+    aspect-ratio: 3/1;
+    width: 15%;
+    .image {
+      object-fit: contain;
+    }
+  }
+  .navigationBarItemsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    font-weight: 600;
+    & > *{
+      cursor: pointer;
+      transition: 0.2s ease;
+      letter-spacing: 0.5rex;
+      &:hover {
+        color: var(--main-purple-light);
+      }
+    }
+  }
+}

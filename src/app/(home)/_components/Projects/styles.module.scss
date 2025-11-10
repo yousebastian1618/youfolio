@@ -1,0 +1,12 @@
+.container {
+  width: 70%;
+  margin: auto;
+  .projectsContainer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 5rem;
+    margin: 3rem 0;
+    & > * {
+    }
+  }
+}

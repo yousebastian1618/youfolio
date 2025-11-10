@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  gap: 3rem;
+  .introContainer {
+    width: 50%;
+    .aboutMe {
+      text-align: justify;
+      margin: 3rem 0;
+      letter-spacing: 1px;
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+  }
+  .introImagesContainer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1ex;
+    .imageContainer {
+      position: relative;
+      aspect-ratio: 3/2;
+      .image {
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
