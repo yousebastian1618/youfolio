@@ -5,4 +5,5 @@ export type Project = {
   thumbnail: string;
   description: string;
   techs: string[];
+  progress: number;
 }

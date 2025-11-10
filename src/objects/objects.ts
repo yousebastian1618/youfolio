@@ -27,7 +27,8 @@ export const ProjectItems = [
     color: '#0363ae',
     thumbnail: '/banner-thumbnail.png',
     description: 'BannerCMS is a digital signage content management system I built while working at SRA. it lets businesses easily create, schedule, and update display content through a simple web interface. Designed for scalability and ease of use, it helps teams <b style="color: #0363ae">manage multiple screens remotely</b> and keep content consistent across locations.',
-    techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python']
+    techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python'],
+    progress: 100
   },
   {
     name: 'creativeEngine',
@@ -35,8 +36,8 @@ export const ProjectItems = [
     color: '#86d4ce',
     thumbnail: '/ce-thumbnail.png',
     description: 'Creative Engine is a cloud-based design tool I created while working at SRA. It enables users to pick from a library of templates and quickly customize text, colors and backgrounds to <b style="color: #86d4ce">generate polished content</b> for LED displays without hiring a designer. Seamlessly integrated with <b style="color: #0363ae">Banner CMS</b>, it helps teams deliver eye-catching visuals with minimal effort.',
-    techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python']
-
+    techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python'],
+    progress: 100
   },
   {
     name: 'xConnect',
@@ -44,7 +45,8 @@ export const ProjectItems = [
     color: '#768af0',
     thumbnail: '/xconnect-thumbnail.png',
     description: 'XConnect is a Windows application I created while working at SRA. It is designed for <b style="color: #768af0">remote device management</b> of LED displays. It allows display owners to adjust brightness, control RGB lighting, enable blanking modes, monitor system status from a central dashboard, and so on. The software also provides real-time alerts for warnings and errors, helping users quickly diagnose and resolve issues. Built with a focus on reliability and user convenience, it streamlines the <b style="color: #768af0">maintenance and operation</b> of large-scale LED networks.',
-    techs: ['Flutter', 'Dart']
+    techs: ['Flutter', 'Dart'],
+    progress: 100
   },
   {
     name: 'vitaliNutrition',
@@ -52,7 +54,8 @@ export const ProjectItems = [
     color: '#a91d24',
     thumbnail: '/vitali-nutrition-thumbnail.png',
     description: "Vitali Nutrition is a <b style='color: #a91d24'>SPA</b> built for an OEM/ODM pharmaceutical company to highlight its brand identity and manufacturing process. The website presents the company’s capabilities and product details while maintaining a clean, professional design. It includes an <b style='color: #a91d24'>admin dashboard</b> for managing product images and blog posts, and an <b style='color: #a91d24'>inquiry system</b> that allows visitors to contact the owner or schedule calls directly, creating an efficient connection between clients and the business.",
-    techs: ['React', 'Next.js', 'PostgreSQL', 'Prisma', 'Neon', 'TypeScript']
+    techs: ['React', 'Next.js', 'PostgreSQL', 'Prisma', 'Neon', 'TypeScript'],
+    progress: 100
   },
   {
     name: 'frugalist',
@@ -60,7 +63,8 @@ export const ProjectItems = [
     color: '#61682e',
     thumbnail: '/coming-soon.gif',
     description: 'Frugalist is a <b style="color: #61682e">budgeting app</b> built for people who want to spend smarter and save more. It lets users <b style="color: #61682e">track expenses</b>, set spending limits, and receive real-time alerts when nearing their budgets. Using <b style="color: #61682e">Google and Google Maps data</b>, Frugalist also recommends cheaper alternatives for food, goods, and services, helping users develop mindful spending habits through simplicity and actionable insights.',
-    techs: ['React', 'GO', 'PostgreSQL', 'Neon', 'TypeScript', 'GoLang']
+    techs: ['React', 'GO', 'PostgreSQL', 'Neon', 'TypeScript', 'GoLang'],
+    progress: 50
   },
   {
     name: 'simTradr',
@@ -68,7 +72,8 @@ export const ProjectItems = [
     color: '#ffbf01',
     thumbnail: '/coming-soon.gif',
     description: 'SimTradr is an <b style="color: #ffbf01">intelligent trading assistant</b> designed for both new and experienced traders. It analyzes trends and discussions from Reddit and other financial sources to suggest potential stocks, ETFs, and futures to trade. Users can <b style="color: #ffbf01">backtest</b> their strategies with historical daily charts to refine decision-making. The platform also provides <b style="color: #ffbf01">performance tracking</b> tools that monitor earnings, returns, and win rates, giving traders clear insights into their progress and profitability.',
-    techs: ['React', 'Next.js', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python']
+    techs: ['React', 'Next.js', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
+    progress: 15
   }
 ]
 

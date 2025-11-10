@@ -2,6 +2,7 @@ import styles from './styles.module.scss';
 import type { Project } from '@/types/types';
 import Image from "next/image";
 import Techs from "@/app/(home)/_components/Projects/_components/Techs/Techs";
+import ProgressBar from "@/components/ProgressBar/ProgressBar";
 
 type Props = {
   project: Project
@@ -30,6 +31,9 @@ export default function ProjectItem({ project }: Props) {
         <div className={styles.projectDescription}>
           <p dangerouslySetInnerHTML={{ __html: project.description}} />
         </div>
+        {project.progress !== 100 ? (
+          <ProgressBar progress={project.progress} />
+        ) : (<></>)}
         <Techs techs={project.techs} />
       </div>
     </div>

@@ -5,7 +5,7 @@
   gap: 5rem;
   .thumbnailContainer {
     position: relative;
-    aspect-ratio: 7/5;
+    aspect-ratio: 11/7;
     width: 50%;
     .thumbnail {
       object-fit: fill;
@@ -23,7 +23,7 @@
       text-align: justify;
       margin: 1rem 0;
       letter-spacing: 1px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 2rem;
     }
   }
