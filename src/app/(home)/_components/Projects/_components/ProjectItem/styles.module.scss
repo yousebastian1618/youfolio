@@ -6,14 +6,14 @@
   .thumbnailContainer {
     position: relative;
     aspect-ratio: 8/5;
-    width: 50%;
+    width: 40%;
     .thumbnail {
       object-fit: fill;
       border-radius: 4ex;
     }
   }
   .projectInfo {
-    width: 50%;
+    width: 60%;
     .projectTitle {
       font-size: 2rem;
       letter-spacing: 0.8rex;

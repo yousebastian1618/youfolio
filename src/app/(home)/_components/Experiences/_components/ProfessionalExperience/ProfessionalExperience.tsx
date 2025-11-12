@@ -19,15 +19,6 @@ export default function ProfessionalExperience({ experience }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
-        <div className={styles.imageContainer}>
-          <Image
-            className={styles.image}
-            src={experience.thumbnail}
-            alt={experience.employer}
-            fill
-            draggable={false}
-          />
-        </div>
         <div className={styles.topTitle}>
           <h2
             className={styles.experienceTitle}
@@ -38,6 +29,15 @@ export default function ProfessionalExperience({ experience }: Props) {
           <div className={styles.experienceSubtitle}>
             { experience.jobTitle}
           </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <Image
+            className={styles.image}
+            src={experience.thumbnail}
+            alt={experience.employer}
+            fill
+            draggable={false}
+          />
         </div>
       </div>
       <div
