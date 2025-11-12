@@ -62,7 +62,7 @@ export const ProjectItems = [
     label: 'Frugalist',
     color: '#61682e',
     thumbnail: '/projects/coming-soon.gif',
-    description: 'Frugalist is a <b style="color: #61682e">budgeting app</b> built for people who want to spend smarter and save more. It lets users <b style="color: #61682e">track expenses</b>, set spending limits, and receive real-time alerts when nearing their budgets. Using <b style="color: #61682e">Google and Google Maps data</b>, Frugalist also recommends cheaper alternatives for food, goods, and services, helping users develop mindful spending habits through simplicity and actionable insights.',
+    description: 'Frugalist is a <b style="color: #61682e">budgeting mobile app</b> built for people who want to spend smarter and save more. It lets users <b style="color: #61682e">track expenses</b>, set spending limits, and receive real-time alerts when nearing their budgets. Using <b style="color: #61682e">Google and Google Maps data</b>, Frugalist also recommends cheaper alternatives for food, goods, and services, helping users develop mindful spending habits through simplicity and actionable insights.',
     techs: ['React', 'GO', 'PostgreSQL', 'Neon', 'TypeScript', 'GoLang'],
     progress: 50
   },
@@ -115,19 +115,19 @@ export const YouSkills = [
   {
     head: 'Angular',
     yearsOfExperience: 4,
-    proficiency: 4,
+    proficiency: 4.5,
     type: 'framework'
   },
   {
     head: 'React',
     yearsOfExperience: 3,
-    proficiency: 4.5,
+    proficiency: 5,
     type: 'framework'
   },
   {
     head: 'Next.js',
     yearsOfExperience: 2,
-    proficiency: 4.5,
+    proficiency: 5,
     type: 'framework'
   },
   {
@@ -139,7 +139,7 @@ export const YouSkills = [
   {
     head: 'Django',
     yearsOfExperience: 5,
-    proficiency: 5,
+    proficiency: 4.5,
     type: 'framework'
   },
   {

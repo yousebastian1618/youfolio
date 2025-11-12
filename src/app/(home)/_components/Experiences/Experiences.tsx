@@ -20,10 +20,10 @@ export default function Experiences() {
       <div className={styles.experiencesContainer}>
         <ProfessionalExperience experience={ProfessionalExperiences[0]} />
       </div>
+      <div className={`${styles.skill} text-[var(--main-yellow)]`}>
+        Technical Skills
+      </div>
       <div className={styles.skillsContainer}>
-        <div className={`${styles.skill} text-[var(--main-yellow)]`}>
-          Technical Skills
-        </div>
         <div className={styles.frameworks}>
           <div className={`${styles.skillTitle}`}>Frameworks</div>
           <div className={styles.skills}>
