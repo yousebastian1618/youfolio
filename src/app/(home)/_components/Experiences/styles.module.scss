@@ -1,0 +1,28 @@
+.container {
+  width: 70%;
+  margin: auto;
+  .skillsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .skill {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .frameworks, .languages {
+      padding: 2rem;
+      .skillTitle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: start;
+      }
+      .skills {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rex;
+        row-gap: 2rem;
+      }
+    }
+  }
+}

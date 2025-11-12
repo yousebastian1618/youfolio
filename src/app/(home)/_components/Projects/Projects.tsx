@@ -6,7 +6,7 @@ import ProjectItem from "@/app/(home)/_components/Projects/_components/ProjectIt
 export default function Projects() {
   return (
     <div className={styles.container}>
-      <Title title={'You Projects.'} color={'yellow'} layout={'right'} />
+      <Title title={"You Projects."} color={'yellow'} layout={'right'} />
       <div className={styles.projectsContainer}>
         {ProjectItems.map((project, index) => {
           return <ProjectItem key={index} project={project} />;

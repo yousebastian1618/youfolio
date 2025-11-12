@@ -2,24 +2,4 @@
   display: flex;
   gap: 1em;
   justify-content: right;
-  .logoContainer {
-    position: relative;
-    aspect-ratio: 1;
-    width: 2.5rex;
-    .logo {
-      object-fit: contain;
-    }
-    .tooltip {
-      position: absolute;
-      left: -50%;
-      top: 100%;
-      transform: translateY(50%);
-      background-color: var(--main-yellow);
-      color: var(--foreground);
-      padding: 0.2rex 0.6rex;
-      font-weight: bold;
-      font-size: 0.8rem;
-      border-radius: 2rem;
-    }
-  }
 }

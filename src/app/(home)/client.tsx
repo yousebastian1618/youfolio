@@ -5,6 +5,7 @@ import Introduction from "@/app/(home)/_components/Introduction/Introduction";
 import About from "@/app/(home)/_components/About/About";
 import Projects from "@/app/(home)/_components/Projects/Projects";
 import {useEffect, useRef, useState} from "react";
+import Experiences from "@/app/(home)/_components/Experiences/Experiences";
 
 export default function Home() {
 
@@ -35,6 +36,9 @@ export default function Home() {
       </div>
       <div className={styles.projects}>
         <Projects />
+      </div>
+      <div className={styles.skills}>
+        <Experiences />
       </div>
     </>
   )
