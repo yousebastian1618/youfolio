@@ -58,13 +58,22 @@ export const ProjectItems = [
     progress: 100
   },
   {
+    name: 'askAva',
+    label: 'AskAva',
+    color: '#2AB7CA',
+    thumbnail: '/projects/coming-soon.gif',
+    description: 'AskAva is your friendly, intelligent <b style="color: #2AB7CA">interview companion</b> designed to help you practice and prepare with confidence. Whether you’re aiming for your first job or a senior role, AskAva simulates realistic interview scenarios tailored to your resume and target position. It generates personalized questions, provides smart feedback on your answers, and even creates flashcards to help you master key topics. With a calm, conversational <b style="color: #2AB7CA">AI persona</b>, AskAva helps you refine your communication, identify improvement areas, and feel genuinely ready for the real interview',
+    techs: ['React', 'Next.js', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
+    progress: 30
+  },
+  {
     name: 'frugalist',
     label: 'Frugalist',
     color: '#61682e',
     thumbnail: '/projects/coming-soon.gif',
     description: 'Frugalist is a <b style="color: #61682e">budgeting mobile app</b> built for people who want to spend smarter and save more. It lets users <b style="color: #61682e">track expenses</b>, set spending limits, and receive real-time alerts when nearing their budgets. Using <b style="color: #61682e">Google and Google Maps data</b>, Frugalist also recommends cheaper alternatives for food, goods, and services, helping users develop mindful spending habits through simplicity and actionable insights.',
-    techs: ['React', 'GO', 'PostgreSQL', 'Neon', 'TypeScript', 'GoLang'],
-    progress: 50
+    techs: ['React', 'Expo', 'PostgreSQL', 'Neon', 'TypeScript'],
+    progress: 20
   },
   {
     name: 'simTradr',
@@ -72,8 +81,8 @@ export const ProjectItems = [
     color: '#ffbf01',
     thumbnail: '/projects/coming-soon.gif',
     description: 'SimTradr is an <b style="color: #ffbf01">intelligent trading assistant</b> designed for both new and experienced traders. It analyzes trends and discussions from Reddit and other financial sources to suggest potential stocks, ETFs, and futures to trade. Users can <b style="color: #ffbf01">backtest</b> their strategies with historical daily charts to refine decision-making. The platform also provides <b style="color: #ffbf01">performance tracking</b> tools that monitor earnings, returns, and win rates, giving traders clear insights into their progress and profitability.',
-    techs: ['React', 'Next.js', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
-    progress: 15
+    techs: ['React', 'Next.js', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
+    progress: 0
   }
 ]
 
@@ -96,7 +105,9 @@ export const TechLogoMap: Record<string, string> = {
   'CSS': '/programming-logo/css-logo.png',
   'SASS':'/programming-logo/sass-logo.png',
   'HTML': '/programming-logo/html-logo.png',
-  'JavaScript': '/programming-logo/javascript-logo.png'
+  'JavaScript': '/programming-logo/javascript-logo.png',
+  'Expo': '/programming-logo/expo-logo.png',
+  "OpenAI": '/programming-logo/openai-logo.png'
 }
 
 export const YouSkills = [
@@ -122,6 +133,12 @@ export const YouSkills = [
     head: 'React',
     yearsOfExperience: 3,
     proficiency: 5,
+    type: 'framework'
+  },
+  {
+    head: 'Expo',
+    yearsOfExperience: 3,
+    proficiency: 2,
     type: 'framework'
   },
   {

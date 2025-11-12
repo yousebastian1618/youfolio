@@ -2,21 +2,25 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
-  margin: auto;
   gap: 3rem;
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    gap: 2rem;
+    .introContainer, .introImagesContainer {
+      width: 100%;
+    }
+  }
   .introContainer {
-    width: 50%;
+    width: 100%;
     .aboutMe {
       text-align: justify;
-      margin: 3rem 0;
       letter-spacing: 1px;
       font-size: 1.4rem;
       line-height: 2.5rem;
     }
   }
   .introImagesContainer {
-    width: 50%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -24,6 +28,7 @@
     .imageContainer {
       position: relative;
       aspect-ratio: 8/5;
+      mask-image: radial-gradient(circle, black 70%, transparent 100%);
       .image {
         object-fit: fill;
         border-radius: 1rem;

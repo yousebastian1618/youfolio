@@ -1,23 +1,23 @@
 .container {
-  width: 60%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   .skill {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
   }
   .skillsContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: 2rem;
     .frameworks, .languages {
       .skillTitle {
         font-size: 1.5rem;
         font-weight: bold;
         text-align: start;
-        margin: 1rem 0;
-
+        margin-bottom: 1rem;
       }
       .skills {
         display: grid;

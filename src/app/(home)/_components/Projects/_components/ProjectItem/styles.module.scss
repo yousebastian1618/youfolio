@@ -1,19 +1,20 @@
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5rem;
+  gap: 4rem;
+  @media( max-width: 1400px) {
+    flex-direction: column;
+  }
   .thumbnailContainer {
     position: relative;
     aspect-ratio: 8/5;
-    width: 40%;
+    width: 100%;
     .thumbnail {
       object-fit: fill;
       border-radius: 4ex;
     }
   }
   .projectInfo {
-    width: 60%;
+    width: 100%;
     .projectTitle {
       font-size: 2rem;
       letter-spacing: 0.8rex;
@@ -22,7 +23,6 @@
     }
     .projectDescription {
       text-align: justify;
-      margin: 1rem 0;
       letter-spacing: 1px;
       font-size: 1.1rem;
       line-height: 2rem;

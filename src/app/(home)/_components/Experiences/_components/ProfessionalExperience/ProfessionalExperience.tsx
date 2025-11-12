@@ -40,13 +40,15 @@ export default function ProfessionalExperience({ experience }: Props) {
           />
         </div>
       </div>
-      <div
-        className={styles.experienceDescription}
-        dangerouslySetInnerHTML={{ __html: experience.description }}
-      >
-      </div>
-      <div className={styles.duration}>
-        { getDuration(experience.startDate, experience.endDate) }
+      <div className={styles.experienceDescription}>
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: experience.description }}
+        >
+        </div>
+        <div className={styles.duration}>
+          { getDuration(experience.startDate, experience.endDate) }
+        </div>
       </div>
     </div>
   )

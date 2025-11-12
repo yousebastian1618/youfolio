@@ -1,0 +1,11 @@
+.button {
+  cursor: pointer;
+  padding: 1rex 5rex;
+  border: 1px solid var(--main-yellow);
+  font-weight: bold;
+  border-radius: 1rex;
+  transition: 0.2s ease;
+  &:hover {
+    border: 1px solid var(--main-purple);
+  }
+}

@@ -1,8 +1,11 @@
 .container {
-  margin: 4rem 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   padding: 3rem;
   border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
   .topSection {
     display: flex;
     justify-content: space-between;
@@ -25,21 +28,42 @@
       .experienceSubtitle {
         font-weight: 600;
         font-size: 1.3rem;
-        margin: 1rex 0;
         text-align: start;
+      }
+    }
+    @media (max-width: 1400px) {
+      .imageContainer {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        .image {
+          object-fit: fill;
+          border-radius: 2ex;
+        }
+      }
+      .topTitle {
+        .experienceTitle {
+          font-size: 1.6rem;
+          letter-spacing: 0.3rem;
+        }
+        .experienceSubtitle {
+          font-size: 1.1rem;
+        }
       }
     }
   }
   .experienceDescription {
-    text-align: justify;
-    margin: 1rem 0;
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-    line-height: 2rem;
+    .description {
+      text-align: justify;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+    .duration {
+      text-align: end;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
   }
-  .duration {
-    text-align: end;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
+
 }

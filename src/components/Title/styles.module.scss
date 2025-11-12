@@ -1,27 +1,21 @@
-.container {
+@mixin titleBase {
   font-weight: bold;
   font-size: 3rem;
   display: flex;
-  .title1 {
-  }
-  .title2Purple {
-    color: var(--main-purple);
-  }
-  .title2Yellow {
-    color: var(--main-yellow-dark);
-  }
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  @include titleBase;
 }
 .containerRight {
-  font-weight: bold;
-  font-size: 3rem;
-  display: flex;
+  @include titleBase;
   justify-content: right;
-  .title1 {
-  }
-  .title2Purple {
-    color: var(--main-purple);
-  }
-  .title2Yellow {
-    color: var(--main-yellow-dark);
-  }
+}
+
+.title2Purple {
+  color: var(--main-purple);
+}
+.title2Yellow {
+  color: var(--main-yellow-dark);
 }

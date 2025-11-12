@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  .inputLabel {
+    font-weight: bold;
+  }
+}
+.inputForm {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rex;
+  border-bottom: 1px solid white;
+  color: black;
+
+}

@@ -1,0 +1,45 @@
+.container {
+  .subTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .formContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: 2rem 0;
+    @media (max-width: 1400px) {
+      display: flex;
+      flex-direction: column;
+      .imageContainer {
+        display: none;
+      }
+    }
+    .squareBackground {
+      position: absolute;
+      width: 110%;
+      height: 60%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      background: var(--main-purple);
+      border-radius: 1rem;
+    }
+    .imageContainer {
+      position: relative;
+      aspect-ratio: 3/2;
+      width: 100%;
+      .image {
+        object-fit: fill;
+        border-radius: 1rem;
+      }
+    }
+    .form {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import Projects from "@/app/(home)/_components/Projects/Projects";
 import {useEffect, useRef, useState} from "react";
 import Experiences from "@/app/(home)/_components/Experiences/Experiences";
 import Footer from "@/app/(home)/_components/Footer/Footer";
+import Contact from "@/app/(home)/_components/Contact/Contact";
 
 export default function Home() {
 
@@ -26,20 +27,27 @@ export default function Home() {
 
   return (
     <>
-      <div className={styles.navigationBar}>
-        <NavigationBar shrunk={shrunk} />
+      <div className={styles.nav} ref={introRef}>
+        <div className={styles.navigationBar}>
+          <NavigationBar shrunk={shrunk} />
+        </div>
+        <div className={styles.introduction}>
+          <Introduction />
+        </div>
       </div>
-      <div className={styles.introduction} ref={introRef}>
-        <Introduction />
-      </div>
-      <div className={styles.about}>
-        <About />
-      </div>
-      <div className={styles.projects}>
-        <Projects />
-      </div>
-      <div className={styles.skills}>
-        <Experiences />
+      <div className={styles.mainBody}>
+        <div className={styles.about}>
+          <About />
+        </div>
+        <div className={styles.projects}>
+          <Projects />
+        </div>
+        <div className={styles.experiences}>
+          <Experiences />
+        </div>
+        <div className={styles.contact}>
+          <Contact />
+        </div>
       </div>
       <hr />
       <div className={styles.footer}>

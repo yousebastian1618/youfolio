@@ -1,6 +1,4 @@
 .container {
-  width: 60%;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +6,7 @@
   .logoContainer {
     position: relative;
     aspect-ratio: 3;
-    width: 20%;
+    width: 15em;
     margin: auto;
     .logo {
       object-fit: fill;
@@ -16,7 +14,6 @@
   }
   @mixin footerElements {
     display: flex;
-    margin: auto;
     width: 50%;
     justify-content: center;
     font-weight: bold;
