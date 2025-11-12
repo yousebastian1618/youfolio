@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { Dancing_Script, Geist, Geist_Mono, PT_Sans_Narrow } from 'next/font/google';
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dancing-script'
+})
+
+const ptSansNarrow = PT_Sans_Narrow({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: '--font-pt-sans-narrow'
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +57,7 @@ export default function RootLayout({
       <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css'/>
     </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${ptSansNarrow.variable} antialiased`}
       >
         {children}
       </body>

@@ -6,6 +6,7 @@ import About from "@/app/(home)/_components/About/About";
 import Projects from "@/app/(home)/_components/Projects/Projects";
 import {useEffect, useRef, useState} from "react";
 import Experiences from "@/app/(home)/_components/Experiences/Experiences";
+import Footer from "@/app/(home)/_components/Footer/Footer";
 
 export default function Home() {
 
@@ -39,6 +40,10 @@ export default function Home() {
       </div>
       <div className={styles.skills}>
         <Experiences />
+      </div>
+      <hr />
+      <div className={styles.footer}>
+        <Footer />
       </div>
     </>
   )

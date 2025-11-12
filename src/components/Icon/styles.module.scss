@@ -1,0 +1,17 @@
+.container {
+  .icon {
+    .tooltip {
+      position: absolute;
+      z-index: 1;
+      left: -50%;
+      top: 100%;
+      transform: translateY(50%);
+      background-color: var(--main-yellow);
+      color: var(--foreground);
+      padding: 0.2rex 0.6rex;
+      font-weight: bold;
+      font-size: 0.8rem;
+      border-radius: 2rem;
+    }
+  }
+}
