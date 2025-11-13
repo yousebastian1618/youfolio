@@ -51,7 +51,7 @@ export default function Home() {
 
     el.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     })
   }
 
@@ -81,7 +81,7 @@ export default function Home() {
       </div>
       <hr />
       <div className={styles.footer}>
-        <Footer />
+        <Footer onQuickLinkClick={(sectionId: string) => handleQuicklinkClick(sectionId)}/>
       </div>
     </>
   )

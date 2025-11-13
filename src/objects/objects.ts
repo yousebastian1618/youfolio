@@ -231,17 +231,17 @@ export const SocialMedias = [
   {
     name: 'x',
     icon: 'X',
-    url: 'https://github.com/yousebastian1618'
+    url: 'https://x.com/yousebastian1618'
   },
   {
     name: 'linkedin',
     icon: 'linkedin',
-    url: 'https://github.com/yousebastian1618'
+    url: 'https://www.linkedin.com/in/sebastian-you-902306218/'
   },
   {
     name: 'instagram',
     icon: 'instagram',
-    url: 'https://github.com/yousebastian1618'
+    url: 'https://www.instagram.com/yousebastian1618'
   }
 ]
 
