@@ -16,7 +16,6 @@ export const NavigationBarItems = [
     label: 'CONTACT'
   }
 ]
-export const IntroText = "<b>Hi</b>, I'm <b>Sebastian</b>.<br/>Welcome to Youfolio."
 
 export const AboutMe = "My journey blends <b style='color: var(--main-yellow-dark);'>technology</b>, <b style='color: var(--main-yellow-dark);'>finance</b>, and <b style='color: var(--main-yellow-dark);'>adventure</b>. I build modern applications as a full-stack <b style='color: var(--main-purple);'>engineer</b>, study global markets as a <b style='color: var(--main-purple);'>trader</b>, and discover new places as a <b style='color: var(--main-purple);'>traveler</b>. Each path teaches me something new about system, people, and the world, and I love bringing those lessons into the products I create."
 
@@ -26,6 +25,7 @@ export const ProjectItems = [
     label: 'Banner CMS',
     color: '#0363ae',
     thumbnail: '/projects/banner-thumbnail.png',
+    url: 'https://bannercms.sea.samsung.com',
     description: 'BannerCMS is a digital signage content management system I built while working at SRA. it lets businesses easily create, schedule, and update display content through a simple web interface. Designed for scalability and ease of use, it helps teams <b style="color: #0363ae">manage multiple screens remotely</b> and keep content consistent across locations.',
     techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python'],
     progress: 100
@@ -34,6 +34,7 @@ export const ProjectItems = [
     name: 'creativeEngine',
     label: 'Creative Engine',
     color: '#86d4ce',
+    url: 'https://ce.sea.samsung.com',
     thumbnail: '/projects/ce-thumbnail.png',
     description: 'Creative Engine is a cloud-based design tool I created while working at SRA. It enables users to pick from a library of templates and quickly customize text, colors and backgrounds to <b style="color: #86d4ce">generate polished content</b> for LED displays without hiring a designer. Seamlessly integrated with <b style="color: #0363ae">Banner CMS</b>, it helps teams deliver eye-catching visuals with minimal effort.',
     techs: ['Angular', 'Django', 'PostgreSQL', 'AWS', 'TypeScript', 'Python'],
@@ -43,6 +44,7 @@ export const ProjectItems = [
     name: 'xConnect',
     label: 'XConnect',
     color: '#768af0',
+    url: '',
     thumbnail: '/projects/xconnect-thumbnail.png',
     description: 'XConnect is a Windows application I created while working at SRA. It is designed for <b style="color: #768af0">remote device management</b> of LED displays. It allows display owners to adjust brightness, control RGB lighting, enable blanking modes, monitor system status from a central dashboard, and so on. The software also provides real-time alerts for warnings and errors, helping users quickly diagnose and resolve issues. Built with a focus on reliability and user convenience, it streamlines the <b style="color: #768af0">maintenance and operation</b> of large-scale LED networks.',
     techs: ['Flutter', 'Dart'],
@@ -52,6 +54,7 @@ export const ProjectItems = [
     name: 'vitaliNutrition',
     label: 'Vitali Nutrition Inc.',
     color: '#a91d24',
+    url: '',
     thumbnail: '/projects/vitali-nutrition-thumbnail.png',
     description: "Vitali Nutrition is a <b style='color: #a91d24'>SPA</b> built for an OEM/ODM pharmaceutical company to highlight its brand identity and manufacturing process. The website presents the company’s capabilities and product details while maintaining a clean, professional design. It includes an <b style='color: #a91d24'>admin dashboard</b> for managing product images and blog posts, and an <b style='color: #a91d24'>inquiry system</b> that allows visitors to contact the owner or schedule calls directly, creating an efficient connection between clients and the business.",
     techs: ['React', 'Next.js', 'PostgreSQL', 'Prisma', 'Neon', 'TypeScript'],
@@ -61,6 +64,7 @@ export const ProjectItems = [
     name: 'askAva',
     label: 'AskAva',
     color: '#2AB7CA',
+    url: '',
     thumbnail: '/projects/coming-soon.gif',
     description: 'AskAva is your friendly, intelligent <b style="color: #2AB7CA">interview companion</b> designed to help you practice and prepare with confidence. Whether you’re aiming for your first job or a senior role, AskAva simulates realistic interview scenarios tailored to your resume and target position. It generates personalized questions, provides smart feedback on your answers, and even creates flashcards to help you master key topics. With a calm, conversational <b style="color: #2AB7CA">AI persona</b>, AskAva helps you refine your communication, identify improvement areas, and feel genuinely ready for the real interview',
     techs: ['React', 'Next.js', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
@@ -70,6 +74,7 @@ export const ProjectItems = [
     name: 'frugalist',
     label: 'Frugalist',
     color: '#61682e',
+    url: '',
     thumbnail: '/projects/coming-soon.gif',
     description: 'Frugalist is a <b style="color: #61682e">budgeting mobile app</b> built for people who want to spend smarter and save more. It lets users <b style="color: #61682e">track expenses</b>, set spending limits, and receive real-time alerts when nearing their budgets. Using <b style="color: #61682e">Google and Google Maps data</b>, Frugalist also recommends cheaper alternatives for food, goods, and services, helping users develop mindful spending habits through simplicity and actionable insights.',
     techs: ['React', 'Expo', 'PostgreSQL', 'Neon', 'TypeScript'],
@@ -79,6 +84,7 @@ export const ProjectItems = [
     name: 'simTradr',
     label: 'SimTradr',
     color: '#ffbf01',
+    url: '',
     thumbnail: '/projects/coming-soon.gif',
     description: 'SimTradr is an <b style="color: #ffbf01">intelligent trading assistant</b> designed for both new and experienced traders. It analyzes trends and discussions from Reddit and other financial sources to suggest potential stocks, ETFs, and futures to trade. Users can <b style="color: #ffbf01">backtest</b> their strategies with historical daily charts to refine decision-making. The platform also provides <b style="color: #ffbf01">performance tracking</b> tools that monitor earnings, returns, and win rates, giving traders clear insights into their progress and profitability.',
     techs: ['React', 'Next.js', 'OpenAI', 'FastAPI', 'PostgreSQL', 'Neon', 'TypeScript', 'Python'],
@@ -211,7 +217,8 @@ export const ProfessionalExperiences = [
     description: 'At Samsung Research America, I worked as a Full-Stack Engineer helping to modernize and improve key company platforms. I rebuilt an outdated web system into a more stable and easy-to-use product that increased customer adoption and reduced issues significantly. I also helped design a new content creation platform that made publishing faster and more efficient, saving teams time and effort. In addition, I improved several features that made the platform more engaging and reliable for users, and redesigned a desktop application to make it simpler and more intuitive to use. Throughout my time there, I focused on creating better user experiences, improving efficiency, and helping teams work more effectively.',
     startDate: new Date(2022, 3),
     endDate: new Date(2025, 10),
-    color: '#038aff'
+    color: '#038aff',
+    url: 'https://www.linkedin.com/company/prismview/'
   }
 ]
 

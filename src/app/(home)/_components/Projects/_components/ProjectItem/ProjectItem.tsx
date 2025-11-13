@@ -3,6 +3,7 @@ import type { Project } from '@/types/types';
 import Image from "next/image";
 import Techs from "@/app/(home)/_components/Projects/_components/Techs/Techs";
 import ProgressBar from "@/components/ProgressBar/ProgressBar";
+import Link from "next/link";
 
 type Props = {
   project: Project
@@ -17,7 +18,7 @@ export default function ProjectItem({ project }: Props) {
           src={project.thumbnail}
           alt={project.label}
           fill
-          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          sizes="100vw"
           draggable={false}
         />
       </div>
@@ -26,7 +27,11 @@ export default function ProjectItem({ project }: Props) {
           className={styles.projectTitle}
           style={{ color: project.color }}
         >
-          {project.label}
+          {project.url !== '' ? (
+            <Link href={project.url} target="_blank" rel="noopener noreferrer">
+              {project.label}
+            </Link>
+          ) : project.label}
         </h2>
         <div className={styles.projectDescription}>
           <p dangerouslySetInnerHTML={{ __html: project.description}} />

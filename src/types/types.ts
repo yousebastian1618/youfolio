@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   label: string;
   color: string;
+  url: string;
   thumbnail: string;
   description: string;
   techs: string[];

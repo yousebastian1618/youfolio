@@ -45,27 +45,37 @@ export default function Home() {
     }
   }, []);
 
+  const handleQuicklinkClick = (sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  }
+
   return (
     <>
       <div className={styles.nav} ref={introRef}>
         <div className={styles.navigationBar}>
-          <NavigationBar shrunk={shrunk} />
+          <NavigationBar shrunk={shrunk} onQuickLinkClick={(sectionId: string) => handleQuicklinkClick(sectionId)}/>
         </div>
         <div className={styles.introduction}>
           <Introduction />
         </div>
       </div>
       <div className={styles.mainBody}>
-        <div className={styles.about} ref={aboutRef}>
+        <div className={styles.about} id='about' ref={aboutRef}>
           <About />
         </div>
-        <div className={styles.projects}>
+        <div className={styles.projects} id='projects'>
           <Projects />
         </div>
-        <div className={styles.experiences}>
+        <div className={styles.experiences} id='experiences'>
           <Experiences />
         </div>
-        <div className={styles.contact}>
+        <div className={styles.contact} id='contact'>
           <Contact />
         </div>
       </div>

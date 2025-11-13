@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import Image from "next/image";
 import {getDuration} from "@/lib/helper";
+import Link from "next/link";
 
 type Props = {
   experience: {
@@ -11,6 +12,7 @@ type Props = {
     startDate: Date;
     endDate: Date;
     color: string;
+    url: string;
   }
 }
 
@@ -24,7 +26,9 @@ export default function ProfessionalExperience({ experience }: Props) {
             className={styles.experienceTitle}
             style={{ color: experience.color }}
           >
-            {experience.employer}
+            <Link href={experience.url} target="_blank" rel="noopener noreferrer">
+              {experience.employer}
+            </Link>
           </h2>
           <div className={styles.experienceSubtitle}>
             { experience.jobTitle}

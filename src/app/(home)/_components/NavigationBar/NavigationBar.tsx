@@ -4,9 +4,10 @@ import {NavigationBarItems} from "@/objects/objects";
 
 type Props = {
   shrunk: boolean;
+  onQuickLinkClick: (sectionId: string) => void;
 }
 
-export default function NavigationBar({ shrunk }: Props) {
+export default function NavigationBar({ shrunk, onQuickLinkClick }: Props) {
   return (
     <div className={`${styles.navigationBarContainer} ${shrunk ? styles.shrunk : ''}`}>
       <div className={`${styles.imageContainer} ${shrunk ? styles.shrunkLogo : ''}`}>
@@ -22,7 +23,9 @@ export default function NavigationBar({ shrunk }: Props) {
       <div className={styles.navigationBarItemsContainer}>
         {NavigationBarItems.map((item) => {
           return (
-            <span key={item.name}>{item.label}</span>
+            <span key={item.name} onClick={() => onQuickLinkClick(item.name)}>
+              {item.label}
+            </span>
           )
         })}
       </div>
