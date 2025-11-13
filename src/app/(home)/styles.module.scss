@@ -1,8 +1,4 @@
-@mixin fadeInLeft {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+@use "@/styles/globals" as gstyle;
 
 .nav {
   .navigationBar {
@@ -24,22 +20,12 @@
     opacity: 0;
     transform: translateX(-50px);
     &.fadeInStyle {
-      @include fadeInLeft();
+      @include gstyle.fadeInLeft();
     }
   }
   .projects {
-    opacity: 0;
-    transform: translateX(-50px);
-    &.fadeInStyle {
-      @include fadeInLeft();
-    }
   }
   .experiences {
-    opacity: 0;
-    transform: translateX(-50px);
-    &.fadeInStyle {
-      @include fadeInLeft();
-    }
   }
   .contact {
   }

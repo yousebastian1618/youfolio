@@ -1,9 +1,16 @@
+@use '@/styles/globals' as gstyle;
+
 .container {
   .projectsContainer {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    & > * {
+    .project {
+      opacity: 0;
+      transform: translateX(-50px);
+      &.fadeInStyle {
+        @include gstyle.fadeInLeft();
+      }
     }
   }
 }

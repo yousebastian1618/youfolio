@@ -13,18 +13,14 @@ export default function Home() {
 
   const introRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const experiencesRef = useRef<HTMLDivElement | null>(null);
 
   const [shrunk, setShrunk] = useState(false);
 
   useEffect(() => {
     const introEl = introRef.current;
     const aboutEl = aboutRef.current;
-    const projectsEl = projectsRef.current;
-    const experiencesEl = experiencesRef.current;
 
-    if (!introEl || !aboutEl || !projectsEl || !experiencesEl) return;
+    if (!introEl || !aboutEl) return;
 
     const introObserver = new IntersectionObserver(
       ([entry]) => {
@@ -41,31 +37,11 @@ export default function Home() {
       }
     )
 
-    const projectsObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          projectsEl.classList.add(styles.fadeInStyle);
-        }
-      }
-    )
-
-    const experiencesObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          experiencesEl.classList.add(styles.fadeInStyle);
-        }
-      }
-    )
-
     introObserver.observe(introEl);
     aboutObserver.observe(aboutEl);
-    projectsObserver.observe(projectsEl);
-    experiencesObserver.observe(experiencesEl);
     return () => {
       introObserver.disconnect();
       aboutObserver.disconnect();
-      projectsObserver.disconnect();
-      experiencesObserver.disconnect();
     }
   }, []);
 
@@ -83,10 +59,10 @@ export default function Home() {
         <div className={styles.about} ref={aboutRef}>
           <About />
         </div>
-        <div className={styles.projects} ref={projectsRef}>
+        <div className={styles.projects}>
           <Projects />
         </div>
-        <div className={styles.experiences} ref={experiencesRef}>
+        <div className={styles.experiences}>
           <Experiences />
         </div>
         <div className={styles.contact}>
