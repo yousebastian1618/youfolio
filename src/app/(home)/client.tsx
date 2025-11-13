@@ -12,17 +12,61 @@ import Contact from "@/app/(home)/_components/Contact/Contact";
 export default function Home() {
 
   const introRef = useRef<HTMLDivElement | null>(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const experiencesRef = useRef<HTMLDivElement | null>(null);
+
   const [shrunk, setShrunk] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const introEl = introRef.current;
+    const aboutEl = aboutRef.current;
+    const projectsEl = projectsRef.current;
+    const experiencesEl = experiencesRef.current;
+
+    if (!introEl || !aboutEl || !projectsEl || !experiencesEl) return;
+
+    const introObserver = new IntersectionObserver(
       ([entry]) => {
         setShrunk(!entry.isIntersecting);
       },
       { threshold: 0.1 }
     );
-    if (introRef.current) observer.observe(introRef.current);
-    return () => observer.disconnect();
+
+    const aboutObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          aboutEl.classList.add(styles.fadeInStyle);
+        }
+      }
+    )
+
+    const projectsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          projectsEl.classList.add(styles.fadeInStyle);
+        }
+      }
+    )
+
+    const experiencesObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          experiencesEl.classList.add(styles.fadeInStyle);
+        }
+      }
+    )
+
+    introObserver.observe(introEl);
+    aboutObserver.observe(aboutEl);
+    projectsObserver.observe(projectsEl);
+    experiencesObserver.observe(experiencesEl);
+    return () => {
+      introObserver.disconnect();
+      aboutObserver.disconnect();
+      projectsObserver.disconnect();
+      experiencesObserver.disconnect();
+    }
   }, []);
 
   return (
@@ -36,13 +80,13 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.mainBody}>
-        <div className={styles.about}>
+        <div className={styles.about} ref={aboutRef}>
           <About />
         </div>
-        <div className={styles.projects}>
+        <div className={styles.projects} ref={projectsRef}>
           <Projects />
         </div>
-        <div className={styles.experiences}>
+        <div className={styles.experiences} ref={experiencesRef}>
           <Experiences />
         </div>
         <div className={styles.contact}>
