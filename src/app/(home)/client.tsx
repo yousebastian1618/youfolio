@@ -45,7 +45,7 @@ export default function Home() {
     }
   }, []);
 
-  const handleQuicklinkClick = (sectionId: string) => {
+  const handleQuickLinkClick = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (!el) return;
 
@@ -59,7 +59,7 @@ export default function Home() {
     <>
       <div className={styles.nav} ref={introRef}>
         <div className={styles.navigationBar}>
-          <NavigationBar shrunk={shrunk} onQuickLinkClick={(sectionId: string) => handleQuicklinkClick(sectionId)}/>
+          <NavigationBar shrunk={shrunk} onQuickLinkClick={(sectionId: string) => handleQuickLinkClick(sectionId)}/>
         </div>
         <div className={styles.introduction}>
           <Introduction />
@@ -81,7 +81,7 @@ export default function Home() {
       </div>
       <hr />
       <div className={styles.footer}>
-        <Footer onQuickLinkClick={(sectionId: string) => handleQuicklinkClick(sectionId)}/>
+        <Footer onQuickLinkClick={(sectionId: string) => handleQuickLinkClick(sectionId)}/>
       </div>
     </>
   )
