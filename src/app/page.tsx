@@ -1,7 +1,8 @@
-import App from "@/app/client";
+import HomePage from "@/app/(home)/page";
 
 export default function AppPage() {
+
   return (
-    <App />
+    <HomePage />
   );
 }

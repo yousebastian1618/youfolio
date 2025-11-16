@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import { Dancing_Script, Geist, Geist_Mono, PT_Sans_Narrow } from 'next/font/google';
+import {ModalProvider} from "@/contexts/modalContext";
+import AppShell from "@/app/AppShell";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -59,7 +61,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${ptSansNarrow.variable} antialiased`}
       >
-        {children}
+        <ModalProvider>
+          <AppShell>
+            {children}
+          </AppShell>
+        </ModalProvider>
       </body>
     </html>
   );

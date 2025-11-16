@@ -11,6 +11,25 @@
     .thumbnail {
       object-fit: fill;
       border-radius: 4ex;
+      cursor: pointer;
+    }
+    .dots {
+      position: absolute;
+      left: 50%;
+      top: 110%;
+      transform: translate(-50%, -110%);
+      display: flex;
+      gap: 1rex;
+      .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid white;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+        }
+      }
     }
   }
   .projectInfo {

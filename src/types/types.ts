@@ -7,6 +7,7 @@ export type Project = {
   description: string;
   techs: string[];
   progress: number;
+  images: string[];
 }
 
 type CheckErrors = Record<string, {criteria: string; message: string}>;
