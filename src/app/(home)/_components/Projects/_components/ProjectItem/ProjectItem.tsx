@@ -14,6 +14,7 @@ type Props = {
 export default function ProjectItem({ project }: Props) {
 
   const { openModal } = useModal();
+
   const [currentThumbnail, setCurrentThumbnail] = useState<string>(project.thumbnail);
 
   const showSlides = () => {
@@ -28,8 +29,8 @@ export default function ProjectItem({ project }: Props) {
     )
   }
 
-  const selectThumbnail = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, image: string) => {
-    setCurrentThumbnail(curr => curr === image ? project.thumbnail : image);
+  const selectThumbnail = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>, thumbnail: string) => {
+    setCurrentThumbnail(curr => curr === thumbnail ? project.thumbnail : thumbnail);
     e.stopPropagation();
   }
 
@@ -45,12 +46,12 @@ export default function ProjectItem({ project }: Props) {
           draggable={false}
         />
         <div className={styles.dots} onClick={(e) => e.stopPropagation()}>
-          {project.images.map((image, index) => {
+          {project.images.map((thumbnail, index) => {
             return (
               <span
                 key={index}
-                className={`${styles.dot} ${currentThumbnail === image ? 'bg-white' : 'bg-transparent'}`}
-                onClick={(e) => selectThumbnail(e, image)}
+                className={`${styles.dot} ${currentThumbnail === thumbnail ? 'bg-white' : 'bg-transparent'}`}
+                onClick={(e) => selectThumbnail(e, thumbnail)}
               >
               </span>
             )

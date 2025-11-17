@@ -1,3 +1,5 @@
+import {Project} from "@/types/types";
+
 export const NavigationBarItems = [
   {
     name: 'about',
@@ -19,9 +21,9 @@ export const NavigationBarItems = [
 
 export const AboutMe = "My journey blends <b style='color: var(--main-yellow-dark);'>technology</b>, <b style='color: var(--main-yellow-dark);'>finance</b>, and <b style='color: var(--main-yellow-dark);'>adventure</b>. I build modern applications as a full-stack <b style='color: var(--main-purple);'>engineer</b>, study global markets as a <b style='color: var(--main-purple);'>trader</b>, and discover new places as a <b style='color: var(--main-purple);'>traveler</b>. Each path teaches me something new about system, people, and the world, and I love bringing those lessons into the products I create."
 
-export const ProjectItems = [
+export const ProjectItems: Project[] = [
   {
-    name: 'bannerCMS',
+    name: 'BannerCMS',
     label: 'Banner CMS',
     color: '#0363ae',
     thumbnail: '/projects/banner-thumbnail.png',
@@ -32,7 +34,7 @@ export const ProjectItems = [
     images: []
   },
   {
-    name: 'creativeEngine',
+    name: 'CreativeEngine',
     label: 'Creative Engine',
     color: '#86d4ce',
     url: 'https://ce.sea.samsung.com',
@@ -43,7 +45,7 @@ export const ProjectItems = [
     images: []
   },
   {
-    name: 'xConnect',
+    name: 'XConnect',
     label: 'XConnect',
     color: '#768af0',
     url: '',
@@ -54,7 +56,7 @@ export const ProjectItems = [
     images: []
   },
   {
-    name: 'vitaliNutrition',
+    name: 'VitaliNutritionInc',
     label: 'Vitali Nutrition Inc.',
     color: '#a91d24',
     url: '',
