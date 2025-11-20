@@ -2,7 +2,6 @@
 
 export function useAPIAction() {
   const apiGET = async (url: string, params?: any) => {
-    console.log('params: ', params);
     const query = params
       ? "?" + new URLSearchParams(params).toString()
       : "";
@@ -17,5 +16,19 @@ export function useAPIAction() {
       console.log('done');
     }
   }
-  return { apiGET }
+  const apiPOST = async (url: string, params?: any) => {
+    const api = `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.NEXT_PUBLIC_BASE_API_VERSION}${url}`;
+    try {
+      const res = await fetch(api, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(params)
+      })
+      return await res.json();
+    } finally {
+      console.log('done');
+    }
+
+  }
+  return { apiGET, apiPOST }
 }

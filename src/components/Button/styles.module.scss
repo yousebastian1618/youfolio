@@ -8,4 +8,12 @@
   &:hover {
     border: 1px solid var(--main-purple);
   }
+  .loadingContainer {
+    position: relative;
+    aspect-ratio: 1;
+    width: 1rem;
+    .loading {
+      object-fit: fill;
+    }
+  }
 }

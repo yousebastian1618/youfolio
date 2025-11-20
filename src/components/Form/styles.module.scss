@@ -12,4 +12,13 @@
     justify-content: center;
     gap: 1rem;
   }
+  .submitMessage {
+    position: absolute;
+    top: 100%;
+    font-weight: bold;
+    border: 1px solid var(--main-purple);
+    padding: 1rem;
+    color: var(--main-yellow);
+    font-size: 1.4rem;
+  }
 }

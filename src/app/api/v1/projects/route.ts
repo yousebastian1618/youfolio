@@ -8,6 +8,5 @@ export async function GET(req: NextRequest) {
     .map((obj) => {
       return `/api/v1/project?key=${encodeURIComponent(obj.Key as string)}`
     })
-  console.log('contents: ', contents);
   return NextResponse.json(contents);
 }
