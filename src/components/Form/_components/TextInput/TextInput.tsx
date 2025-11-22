@@ -27,7 +27,10 @@ function TextInputBase({ formInput, onChange }: Props) {
 
   return (
     <div className={styles.container}>
-      <span className={styles.inputLabel}>{label}</span>
+      <span className={styles.inputLabel}>
+        {label}
+        {error && <span className={styles.errorMessage}>&nbsp;&nbsp;({errorMessage})</span>}
+      </span>
       {type === 'textarea' ?
         <textarea {...commonProps} rows={20} onChange={(e) => handleChange(e.target.value)}/> :
         <input {...commonProps} onChange={(e) => handleChange(e.target.value)}/>

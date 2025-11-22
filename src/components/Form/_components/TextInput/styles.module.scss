@@ -3,6 +3,9 @@
   grid-template-rows: auto 1fr;
   .inputLabel {
     font-weight: bold;
+    .errorMessage {
+      color: red;
+    }
   }
 }
 .inputForm {
@@ -11,5 +14,4 @@
   border-radius: 1rex;
   border-bottom: 1px solid white;
   color: black;
-
 }

@@ -5,6 +5,7 @@ import {formReducer} from "@/reducers/formReducer";
 import TextInput from "@/components/Form/_components/TextInput/TextInput";
 import ButtonComponent from '@/components/Button/Button';
 import {useAPIAction} from "@/actions/apiActions";
+import {useErrorCheckAction} from "@/actions/useErrorCheckAction";
 
 type Props = {
   form: InputItem[],
@@ -12,6 +13,8 @@ type Props = {
 }
 
 export default function Form({ form, buttons }: Props) {
+
+  const { checkError } = useErrorCheckAction();
 
   const { apiPOST } = useAPIAction();
   const [loading, setLoading] = useState(false);
@@ -37,6 +40,22 @@ export default function Form({ form, buttons }: Props) {
   }, [form]);
 
   const onHandleClick = async (button: Button) => {
+    let hasError = false;
+
+    const validatedState = state.map((input) => {
+      const errorMessage = checkError(input);
+      const error = errorMessage !== '';
+
+      if (error) hasError = true;
+      return {
+        ...input,
+        error,
+        errorMessage
+      }
+    })
+
+    dispatch({ type: 'replace_all', replaced: validatedState });
+    if (hasError) return;
     const payload = state.reduce((acc, input) => {
       acc[input.name] = input.value;
       return acc;
